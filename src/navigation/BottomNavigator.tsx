@@ -14,8 +14,8 @@ const BottomNavigator = () => {
         headerShown: false,
         tabBarActiveTintColor: '#e91e63',
       }}>
-      <Tab.Screen name="Home" component={HomeStack} />
-      <Tab.Screen name="Settings" component={ProfileStack} />
+      <Tab.Screen name="HomeTab" component={HomeStack} />
+      <Tab.Screen name="SettingsTab" component={ProfileStack} />
     </Tab.Navigator>
   );
 };

@@ -1,20 +1,19 @@
 
 import React from 'react';
 
-import { View } from 'react-native';
+import { NavigationProp } from '@react-navigation/native';
+
+import { HomeStackNavigatorParamsList } from '../../navigation/HomeNavigator';
+import MainContainer from '../../components/Container/Container';
 
 type ProfileScreenProps = {
-  // Define your prop types here
+  navigation: NavigationProp<HomeStackNavigatorParamsList>;
 };
 
-const ProfileScreen: React.FC<ProfileScreenProps> = (props) => {
-  // Component logic goes here
-
+const ProfileScreen = ({ navigation }: ProfileScreenProps) => {
   return (
-    // JSX code for the HomeScreen component
-    <View>
-      {/* Content of the HomeScreen */}
-    </View>
+    <MainContainer>
+    </MainContainer>
   );
 };
 

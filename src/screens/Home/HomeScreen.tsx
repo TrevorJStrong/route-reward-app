@@ -1,20 +1,25 @@
 
 import React from 'react';
 
-import { View } from 'react-native';
+import { NavigationProp } from '@react-navigation/native';
+
+import CustomButton from '../../components/Container/Button';
+import { HomeStackNavigatorParamsList } from '../../navigation/HomeNavigator';
+import MainContainer from '../../components/Container/Container';
 
 type HomeScreenProps = {
-  // Define your prop types here
+  navigation: NavigationProp<HomeStackNavigatorParamsList>;
 };
 
-const HomeScreen: React.FC<HomeScreenProps> = (props) => {
-  // Component logic goes here
-
+const HomeScreen = ({ navigation}: HomeScreenProps) => {
   return (
-    // JSX code for the HomeScreen component
-    <View>
-      {/* Content of the HomeScreen */}
-    </View>
+    <MainContainer>
+      <CustomButton 
+        onPress={() => navigation.navigate('Profile')} 
+        title="Go to Profile" 
+        style={{backgroundColor: 'red'}}
+      />
+    </MainContainer>
   );
 };
 

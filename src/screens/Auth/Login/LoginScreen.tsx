@@ -1,20 +1,15 @@
 
 import React from 'react';
 
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
+
 import MainContainer from '../../../components/Container/Container';
 
-type LoginScreenProps = {
-  // Define your prop types here
-};
+type LoginScreenProps = {};
 
-const LoginScreen: React.FC<LoginScreenProps> = (props) => {
-  // Component logic goes here
-
+const LoginScreen = (props: LoginScreenProps) => {
   return (
-    // JSX code for the HomeScreen component
     <MainContainer>
-      {/* Content of the HomeScreen */}
       <Text>LoginScreen</Text>
     </MainContainer>
   );

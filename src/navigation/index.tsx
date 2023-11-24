@@ -4,7 +4,12 @@ import BottomNavigator from './BottomNavigator';
 import { useStore } from '../hooks/useStore';
 import AuthStack from './AuthNavigator';
 
-const Stack = createNativeStackNavigator();
+type RootStackParamList = {
+    BottomTabs: undefined;
+    Auth: undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const RootStack = () => {
     const isAuthenticated = useStore((state) => state.isAuthenticated);
